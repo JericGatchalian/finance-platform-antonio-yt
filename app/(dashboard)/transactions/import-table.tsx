@@ -1,7 +1,6 @@
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
     TableHead,
     TableHeader,
@@ -25,7 +24,7 @@ export const ImportTable = ({
     return (
         <div className="rounded-md border overflow-hidden">
             <Table>
-                <TableHeader>
+                <TableHeader className="bg-muted">
                     <TableRow>
                         {headers.map((_item, index) => (
                             <TableHead key={index}>
@@ -40,7 +39,7 @@ export const ImportTable = ({
                 </TableHeader>
                 <TableBody>
                     {body.map((row: string[], index) => (
-                        <TableRow>
+                        <TableRow key={index}>
                             {row.map((cell, index) => (
                                 <TableCell key={index}>
                                     {cell}
